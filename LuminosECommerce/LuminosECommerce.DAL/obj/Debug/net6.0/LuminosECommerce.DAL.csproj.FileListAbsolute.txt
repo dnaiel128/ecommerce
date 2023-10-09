@@ -1,0 +1,17 @@
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.DAL\bin\Debug\net6.0\LuminosECommerce.DAL.deps.json
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.DAL\bin\Debug\net6.0\LuminosECommerce.DAL.runtimeconfig.json
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.DAL\bin\Debug\net6.0\LuminosECommerce.DAL.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.DAL\bin\Debug\net6.0\LuminosECommerce.DAL.pdb
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.DAL\bin\Debug\net6.0\LuminosECommerce.Models.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.DAL\bin\Debug\net6.0\LuminosECommerce.Models.pdb
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.DAL\obj\Debug\net6.0\LuminosECommerce.DAL.csproj.AssemblyReference.cache
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.DAL\obj\Debug\net6.0\LuminosECommerce.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.DAL\obj\Debug\net6.0\LuminosECommerce.DAL.AssemblyInfoInputs.cache
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.DAL\obj\Debug\net6.0\LuminosECommerce.DAL.AssemblyInfo.cs
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.DAL\obj\Debug\net6.0\LuminosECommerce.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.DAL\obj\Debug\net6.0\LuminosECommerce.DAL.csproj.CopyComplete
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.DAL\obj\Debug\net6.0\LuminosECommerce.DAL.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.DAL\obj\Debug\net6.0\refint\LuminosECommerce.DAL.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.DAL\obj\Debug\net6.0\LuminosECommerce.DAL.pdb
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.DAL\obj\Debug\net6.0\LuminosECommerce.DAL.genruntimeconfig.cache
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.DAL\obj\Debug\net6.0\ref\LuminosECommerce.DAL.dll

@@ -1,0 +1,12 @@
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.Models\bin\Debug\net6.0\LuminosECommerce.Models.deps.json
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.Models\bin\Debug\net6.0\LuminosECommerce.Models.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.Models\bin\Debug\net6.0\LuminosECommerce.Models.pdb
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.Models\obj\Debug\net6.0\LuminosECommerce.Models.csproj.AssemblyReference.cache
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.Models\obj\Debug\net6.0\LuminosECommerce.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.Models\obj\Debug\net6.0\LuminosECommerce.Models.AssemblyInfoInputs.cache
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.Models\obj\Debug\net6.0\LuminosECommerce.Models.AssemblyInfo.cs
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.Models\obj\Debug\net6.0\LuminosECommerce.Models.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.Models\obj\Debug\net6.0\LuminosECommerce.Models.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.Models\obj\Debug\net6.0\refint\LuminosECommerce.Models.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.Models\obj\Debug\net6.0\LuminosECommerce.Models.pdb
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.Models\obj\Debug\net6.0\ref\LuminosECommerce.Models.dll

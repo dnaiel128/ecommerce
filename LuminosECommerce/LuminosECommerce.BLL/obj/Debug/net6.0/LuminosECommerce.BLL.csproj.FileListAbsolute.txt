@@ -1,0 +1,17 @@
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.BLL\bin\Debug\net6.0\LuminosECommerce.BLL.deps.json
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.BLL\bin\Debug\net6.0\LuminosECommerce.BLL.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.BLL\bin\Debug\net6.0\LuminosECommerce.BLL.pdb
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.BLL\bin\Debug\net6.0\LuminosECommerce.DAL.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.BLL\bin\Debug\net6.0\LuminosECommerce.Models.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.BLL\bin\Debug\net6.0\LuminosECommerce.DAL.pdb
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.BLL\bin\Debug\net6.0\LuminosECommerce.Models.pdb
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.BLL\obj\Debug\net6.0\LuminosECommerce.BLL.csproj.AssemblyReference.cache
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.BLL\obj\Debug\net6.0\LuminosECommerce.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.BLL\obj\Debug\net6.0\LuminosECommerce.BLL.AssemblyInfoInputs.cache
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.BLL\obj\Debug\net6.0\LuminosECommerce.BLL.AssemblyInfo.cs
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.BLL\obj\Debug\net6.0\LuminosECommerce.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.BLL\obj\Debug\net6.0\LuminosECommerce.BLL.csproj.CopyComplete
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.BLL\obj\Debug\net6.0\LuminosECommerce.BLL.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.BLL\obj\Debug\net6.0\refint\LuminosECommerce.BLL.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.BLL\obj\Debug\net6.0\LuminosECommerce.BLL.pdb
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.BLL\obj\Debug\net6.0\ref\LuminosECommerce.BLL.dll
