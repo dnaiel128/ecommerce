@@ -30,6 +30,9 @@
             "projectReferences": {
               "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.DAL\\LuminosECommerce.DAL.csproj": {
                 "projectPath": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.DAL\\LuminosECommerce.DAL.csproj"
+              },
+              "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.Models\\LuminosECommerce.Models.csproj": {
+                "projectPath": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.Models\\LuminosECommerce.Models.csproj"
               }
             }
           }
@@ -103,10 +106,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[6.0.7, )"
-            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.7, )"
@@ -173,12 +172,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[6.0.7, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -239,17 +232,21 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.20, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.7, )"
-            },
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[6.0.21, )"
-            },
-            "Microsoft.AspNetCore.Identity.UI": {
-              "target": "Package",
-              "version": "[6.0.21, )"
             },
             "Microsoft.AspNetCore.Mvc.Abstractions": {
               "target": "Package",
@@ -268,6 +265,18 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.16, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "Swashbuckle.AspNetCore.Filters": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.30.0, )"
             }
           },
           "imports": [

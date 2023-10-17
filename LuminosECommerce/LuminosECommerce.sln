@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuminosECommerce.Models", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuminosECommerce.DAL", "LuminosECommerce.DAL\LuminosECommerce.DAL.csproj", "{56094249-6D55-4056-B2AC-1DB3C1662BA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuminosECommerce.BLL", "LuminosECommerce.BLL\LuminosECommerce.BLL.csproj", "{25822707-D585-4453-91F6-C81F2AFAF830}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuminosECommerce.BLL", "LuminosECommerce.BLL\LuminosECommerce.BLL.csproj", "{25822707-D585-4453-91F6-C81F2AFAF830}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

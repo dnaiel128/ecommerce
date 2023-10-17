@@ -4,7 +4,7 @@ using LuminosECommerce.Models;
 
 namespace LuminosECommerce.BLL
 {
-    public interface IItemService
+    public interface IItemService : IService<Item>
     {
         Task<PagedModel<Item>> GetByPageWithFilterAndSortAsync(ItemQueryParameters queryParameters);
     }

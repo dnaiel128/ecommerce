@@ -32,11 +32,7 @@ C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.
 C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Humanizer.dll
 C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\MessagePack.dll
 C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\MessagePack.Annotations.dll
-C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
-C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
 C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
@@ -57,9 +53,6 @@ C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.
 C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
-C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
-C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
@@ -262,3 +255,15 @@ C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.
 C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\zh-Hant\Humanizer.resources.dll
 C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Scrutor.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\Daniel\Desktop\LuminosLabs\ecommerce\LuminosECommerce\LuminosECommerce.UI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll

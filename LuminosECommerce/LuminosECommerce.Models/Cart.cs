@@ -7,7 +7,10 @@ namespace LuminosECommerce.Models
         public int Id { get; set; }
         [ForeignKey("User")]
         public int UserId { get; set; }
-        public User User { get; set; } = null!;
-        public List<CartItem>? CartItems { get; set; } = new List<CartItem>();
+        public User? User { get; set; }
+
+        [ForeignKey("Item")]
+        public int ItemId { get; set; }
+        public Item? Item { get; set; }
     }
 }

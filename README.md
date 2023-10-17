@@ -1,2 +1,2 @@
 # ecommerce
-Basic eCommerce store.
+Basic eCommerce store built with APS.NET Core 6 and VUE 3.

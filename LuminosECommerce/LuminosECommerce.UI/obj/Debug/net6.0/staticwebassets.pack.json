@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\LuminosECommerce.UI.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\Vue\\Products.js",
+      "PackagePath": "staticwebassets\\Vue\\Products.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\Vue\\Products2.js",
+      "PackagePath": "staticwebassets\\Vue\\Products2.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\Vue\\Products3.js",
+      "PackagePath": "staticwebassets\\Vue\\Products3.js"
+    },
+    {
       "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -15,6 +27,102 @@
     {
       "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\favicon.ico",
       "PackagePath": "staticwebassets\\images\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\1\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\1\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\1\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\1\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\1\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\1\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\1\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\1\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\1\\thumbnail.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\1\\thumbnail.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\2\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\2\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\2\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\2\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\2\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\2\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\2\\thumbnail.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\2\\thumbnail.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\3\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\3\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\3\\thumbnail.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\3\\thumbnail.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\4\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\4\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\4\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\4\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\4\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\4\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\4\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\4\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\4\\thumbnail.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\4\\thumbnail.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\5\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\5\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\5\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\5\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\5\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\5\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\5\\thumbnail.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\5\\thumbnail.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\6\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\6\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\6\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\6\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\6\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\6\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\items\\6\\thumbnail.jpg",
+      "PackagePath": "staticwebassets\\images\\items\\6\\thumbnail.jpg"
     },
     {
       "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\images\\logo.svg",
@@ -251,6 +359,102 @@
     {
       "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.cjs.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.cjs.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.cjs.min.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.cjs.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.cjs.prod.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.cjs.prod.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.cjs.prod.min.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.cjs.prod.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.esm-browser.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.esm-browser.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.esm-browser.min.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.esm-browser.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.esm-browser.prod.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.esm-browser.prod.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.esm-browser.prod.min.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.esm-browser.prod.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.esm-bundler.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.esm-bundler.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.esm-bundler.min.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.esm-bundler.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.global.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.global.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.global.min.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.global.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.global.prod.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.global.prod.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.global.prod.min.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.global.prod.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.runtime.esm-browser.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.runtime.esm-browser.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.runtime.esm-browser.min.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.runtime.esm-browser.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.runtime.esm-browser.prod.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.runtime.esm-browser.prod.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.runtime.esm-browser.prod.min.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.runtime.esm-browser.prod.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.runtime.esm-bundler.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.runtime.esm-bundler.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.runtime.esm-bundler.min.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.runtime.esm-bundler.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.runtime.global.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.runtime.global.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.runtime.global.min.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.runtime.global.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.runtime.global.prod.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.runtime.global.prod.js"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\lib\\vue\\vue.runtime.global.prod.min.js",
+      "PackagePath": "staticwebassets\\lib\\vue\\vue.runtime.global.prod.min.js"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.LuminosECommerce.UI.Microsoft.AspNetCore.StaticWebAssets.props",

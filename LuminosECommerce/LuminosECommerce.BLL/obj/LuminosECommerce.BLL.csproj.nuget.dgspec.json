@@ -30,6 +30,9 @@
             "projectReferences": {
               "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.DAL\\LuminosECommerce.DAL.csproj": {
                 "projectPath": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.DAL\\LuminosECommerce.DAL.csproj"
+              },
+              "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.Models\\LuminosECommerce.Models.csproj": {
+                "projectPath": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.Models\\LuminosECommerce.Models.csproj"
               }
             }
           }
@@ -103,10 +106,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[6.0.7, )"
-            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.7, )"
@@ -173,12 +172,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[6.0.7, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

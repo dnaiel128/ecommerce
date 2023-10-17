@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LuminosECommerce.DAL\LuminosECommerce.DAL.csproj" />
+    <ProjectReference Include="..\LuminosECommerce.Models\LuminosECommerce.Models.csproj" />
   </ItemGroup>
 
 </Project>
