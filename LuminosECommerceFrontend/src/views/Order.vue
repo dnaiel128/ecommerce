@@ -37,7 +37,7 @@ onMounted( async () => {
 </script>
 
 <template>
-    <button @click="router.push({ name: 'Catalog' })">Back to Catalog</button>
+    <button class="btn btn-outline-secondary" @click="router.push({ name: 'Catalog' })">Back to Catalog</button>
     <div v-if="!orders.length" style="text-align: center;">
         <h1>No orders...</h1>
     </div>

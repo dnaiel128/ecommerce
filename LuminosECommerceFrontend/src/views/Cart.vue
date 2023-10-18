@@ -67,7 +67,8 @@ const addOrder = async (cartItems) => {
 </script>
 
 <template>
-    <button @click="router.push({name:'Catalog'})">Back to Catalog</button>
+    <button class="btn btn-outline-secondary" @click="router.push({name:'Catalog'})">Catalog</button>
+    <button v-if="!isLogged" class="btn btn-outline-secondary" @click="router.push({name:'OrderView'})">Orders</button>
     <div v-if="!store.cart.length" style="text-align: center;">
         <h1>Empty Cart...</h1>
     </div>
@@ -81,12 +82,13 @@ const addOrder = async (cartItems) => {
             <span>Name: {{ item.name }}</span>
             <span>Category: TestCategory</span>
             <span>Price: ${{ item.price }}</span>
-            <button @click="removeFromCart(item.id,!isLogged)">Remove</button>
+            <button class="btn btn-outline-danger" @click="removeFromCart(item.id,!isLogged)">Remove</button>
         </div>
         </div>
         <div class="place-order">
-            <button @click="placeOrder(store.cart)">Place Order - TODO: STRIPE</button>
+            <button class="btn btn-outline-secondary" @click="placeOrder(store.cart)">Place Order - TODO: STRIPE</button>
         </div>
+        
     </div>
 </template>
 

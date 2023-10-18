@@ -47,8 +47,8 @@ onMounted( async () => {
 </script>
 
 <template>
-    <button @click="router.push({name:'Catalog'})">Back to Catalog</button>
-    <div class="product">
+    <button class="btn btn-outline-secondary" @click="router.push({name:'Catalog'})">Back to Catalog</button>
+    <div class="product container">
         <div class="product-image">
             <img :src="product.imageFolderPath">
         </div>
@@ -56,7 +56,7 @@ onMounted( async () => {
             <p>Name: {{ product.name }}</p>
             <p>Description: {{ product.description }}</p>
             <h2>Price: ${{ product.price }}</h2>
-            <button @click="addToCart(!isLogged)">Add to cart</button>
+            <button class="btn btn-outline-secondary my-2 my-sm-0" @click="addToCart(!isLogged)">Add to cart</button>
         </div>
     </div>
 </template>

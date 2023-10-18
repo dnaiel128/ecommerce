@@ -22,22 +22,22 @@ const login = () => {
 </script>
 
 <template>
-    <div>
+    <div class="container">
         <h2>Login</h2>
         <div class="login">
             <form @submit.prevent="login">
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" v-model="user.username" required />
+                    <input type="text" class="form-control" v-model="user.username" required />
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" v-model="user.password" required />
+                    <input type="password" class="form-control" v-model="user.password" required />
                 </div>
-                <button type="submit">Login</button>
+                <button class="btn btn-outline-success" type="submit">Login</button>
             </form>
         </div>
         <br>
-        <button @click="router.push({name:'Catalog'})">Back to Catalog</button>
+        <button class="btn btn-outline-secondary" @click="router.push({name:'Catalog'})">Back to Catalog</button>
     </div>
 </template>

@@ -38,11 +38,13 @@ const goToProductPage = (id) => {
 </script>
 
 <template>
-    <button @click="router.push({name:'Catalog'})">Back to Catalog</button>
-    <button @click="router.push({name:'AdminNewProductView'})">Add Product</button>
-    <div class="admin-item-list" v-for="product in products" :key="product.id">
-        <admin-item :product-data="product" @click="goToProductPage(product.id)"/>
+    <button class="btn btn-outline-secondary my-2 my-sm-0" @click="router.push({name:'Catalog'})">Back to Catalog</button>
+    <button class="btn btn-outline-secondary my-2 my-sm-0" @click="router.push({name:'AdminNewProductView'})">Add Product</button>
+    <div class="container-fluid">
+    <div class="row" >
+        <admin-item v-for="product in products" :key="product.id" :product-data="product" @click="goToProductPage(product.id)"/>
     </div>
+    </div>  
 </template>
 
 <style scoped>

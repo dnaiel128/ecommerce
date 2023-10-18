@@ -14,7 +14,9 @@ const router = useRouter()
 </script>
 
 <template>
-    <h1>Home Page</h1>
-    <h3>Inser Carousell and/or Item Categories</h3>
-    <button @click="router.push({name:'Catalog'})">Catalog</button>
+    <div class="container">
+        <h1>Home Page</h1>
+        <h3>Inser Carousell and/or Item Categories</h3>
+        <button class="btn btn-outline-secondary my-2 my-sm-0" @click="router.push({name:'Catalog'})">Catalog</button>
+    </div>
 </template>

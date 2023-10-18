@@ -18,7 +18,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="product-item-component">
+    <div class="col-sm">
         <img :src="props.productData.imageFolderPath">
         <h2>Name: {{ props.productData.name }}</h2>
     </div>

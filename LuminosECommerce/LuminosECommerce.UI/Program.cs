@@ -46,7 +46,7 @@ builder.Services.AddScoped<IOrderedItemService, OrderedItemService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 //builder.Services.AddSingleton<IConfiguration, ConfigurationManager>();
-builder.Services.AddRazorPages();
+builder.Services.AddControllers();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
@@ -57,7 +57,7 @@ builder.Services.AddCors(options =>
         builder.WithOrigins("http://localhost:5173").AllowAnyMethod().AllowAnyOrigin().AllowAnyHeader();
     });
 });
-
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
     options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
@@ -108,7 +108,7 @@ if (app.Environment.IsDevelopment())
 }
 app.UseHttpsRedirection();
 
-app.UseStaticFiles();
+//app.UseStaticFiles();
 
 app.UseRouting();
 
@@ -117,10 +117,8 @@ app.UseCors("AllowLocalHost");
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapRazorPages();
-
-app.MapControllerRoute(
+/*app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-
+    pattern: "{controller=Home}/{action=Index}/{id?}");*/
+app.MapControllers();
 app.Run();

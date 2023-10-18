@@ -10,7 +10,7 @@ export default defineComponent({
 import { defineProps } from 'vue';
 
 const props = defineProps({
-    order:{
+    order: {
         type: Object,
         required: true
     }
@@ -18,11 +18,13 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="order-item">
-        <h2>Order: {{ props.order.id }}</h2>
+    <div class="jumbotron container">
+        <h1 class="display-4">Order: {{ props.order.id }}</h1>
+        <hr class="my-4">
         <div v-for="item in props.order.orderedItems" :key="item.id">
-            <p>{{item.item.name}} - ${{ item.item.price }}</p>
+            <p>{{ item.item.name }} - ${{ item.item.price }}</p>
         </div>
-        <p>Date: {{ props.order.orderDate }} - Total: {{ props.order.total }}</p>
+        <p>Date: {{ props.order.orderDate }}</p>
+        <p class="text-right">Total: {{ props.order.total }}$</p>
     </div>
 </template>
