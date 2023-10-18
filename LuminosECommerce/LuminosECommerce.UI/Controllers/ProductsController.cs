@@ -2,6 +2,7 @@
 using LuminosECommerce.DAL.Pagination;
 using LuminosECommerce.DAL.Pagination.Models;
 using LuminosECommerce.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LuminosECommerce.UI.Controllers
@@ -87,6 +88,7 @@ namespace LuminosECommerce.UI.Controllers
         }
 
         [Route("/product")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -110,6 +112,7 @@ namespace LuminosECommerce.UI.Controllers
         }
 
         [Route("/product")]
+        [Authorize(Roles = "Admin")]
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -133,20 +136,21 @@ namespace LuminosECommerce.UI.Controllers
         }
 
         [Route("/product")]
+        [Authorize(Roles = "Admin")]
         [HttpDelete]
         [ProducesResponseType(StatusCodes.Status202Accepted)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> DeleteProduct([FromQuery] int id)
+        public async Task<IActionResult> DeleteProduct([FromQuery] int itemId)
         {
-            if (id < 0)
+            if (itemId < 0)
             {
                 return BadRequest("Id must be greater than 0");
             }
 
             try
             {
-                await _itemService.DeleteAsync(id);
+                await _itemService.DeleteAsync(itemId);
                 return Accepted();
             }
             catch (Exception ex)

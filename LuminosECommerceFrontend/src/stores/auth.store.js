@@ -22,9 +22,7 @@ export const authStore = defineStore({
 
             // store user details and jwt in local storage to keep user logged in between page refreshes
             // this only stores the jwt of a user in local storage
-            localStorage.setItem('user', JSON.stringify(user));
-            
-            console.log("login was successfull");
+            localStorage.setItem('user', user);
 
             // redirect to previous url or default to home page
             window.location.href = 'http://localhost:5173/';
@@ -32,7 +30,7 @@ export const authStore = defineStore({
         },
 
         async register(username, password, firstName, lastName, isAdmin){
-            const newUser = await fetchWrapper.post(`${baseUrl}/register`, { username, password, firstName, lastName, isAdmin });
+            await fetchWrapper.post(`${baseUrl}/register`, { username, password, firstName, lastName, isAdmin });
 
             //push to login page
             router.push({name:'LoginView'});

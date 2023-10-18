@@ -9,6 +9,9 @@ export default defineComponent({
 <script setup>
 import { authStore } from '@/stores/auth.store.js';
 import {ref} from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
 
 let user = ref({})
 
@@ -34,5 +37,7 @@ const login = () => {
                 <button type="submit">Login</button>
             </form>
         </div>
+        <br>
+        <button @click="router.push({name:'Catalog'})">Back to Catalog</button>
     </div>
 </template>

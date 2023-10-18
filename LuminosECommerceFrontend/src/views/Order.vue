@@ -17,12 +17,13 @@ import { onMounted, ref} from 'vue';
 const router = useRouter();
 let orders = ref([]);
 
+const user = JSON.parse(localStorage.getItem('user'));
+
 const fetchOrders = async () => {
     let fetchOrders=[]
-    await fetch('https://localhost:7113/order/getAllOrders')
+    await fetch(`https://localhost:7113/order/getAllOrders?userId=${user.id}`)
         .then(res => res.json())
         .then(json => {
-            console.log(json);
             fetchOrders = json;
         })
     return fetchOrders;
@@ -31,6 +32,7 @@ const fetchOrders = async () => {
 
 onMounted( async () => {
     orders.value = await fetchOrders()
+    //console.log("The orders got from db are:"+JSON.stringify(orders.value));
 })
 </script>
 

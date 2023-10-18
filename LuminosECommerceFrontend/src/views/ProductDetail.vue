@@ -7,35 +7,56 @@ export default defineComponent({
 </script>
 
 <script setup>
-import { computed } from 'vue';
-import { productsStore} from '@/stores/products';
+import { ref, onMounted,computed } from 'vue';
+import { cartStore } from '@/stores/cart.store';
 import {useRoute, useRouter} from 'vue-router'
 
-const store = productsStore()
+const store = cartStore()
 const router = useRouter()
 const route = useRoute()
 
-const selectedProduct = computed( () => {
-    return store.products.find((item)=> item.id === Number(route.params.id))
-})
+let product = ref({})
 
-const addToCart = () => {
-    store.addToCart(selectedProduct.value)
+const fetchProductFromDB = async () => {
+    let fetchProduct={}
+    let id = Number(route.params.id);
+      await fetch('https://localhost:7113/product?id='+id)
+      .then(res => res.json())
+      .then(json => {
+        fetchProduct = json;
+      })
+      return fetchProduct;
+    }
+
+const addToCart = (logged) => {
+    console.log("the wanted product to be adddedd to the store is :"+JSON.stringify(product.value));
+    console.log("the user is logged"+logged);
+    store.addToCart(product.value,logged)
     router.push({name:'CartView'})
 }
+
+const user = JSON.parse(localStorage.getItem('user'));
+
+const isLogged = computed(() => {
+  return user==null;
+})
+
+onMounted( async () => {
+    product.value = await fetchProductFromDB()
+})
 </script>
 
 <template>
     <button @click="router.push({name:'Catalog'})">Back to Catalog</button>
     <div class="product">
         <div class="product-image">
-            <img :src="selectedProduct.imageFolderPath">
+            <img :src="product.imageFolderPath">
         </div>
         <div class="product-details">
-            <p>Name: {{ selectedProduct.name }}</p>
-            <p>Description: {{ selectedProduct.description }}</p>
-            <h2>Price: ${{ selectedProduct.price }}</h2>
-            <button @click="addToCart()">Add to cart</button>
+            <p>Name: {{ product.name }}</p>
+            <p>Description: {{ product.description }}</p>
+            <h2>Price: ${{ product.price }}</h2>
+            <button @click="addToCart(!isLogged)">Add to cart</button>
         </div>
     </div>
 </template>

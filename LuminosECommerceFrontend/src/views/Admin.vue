@@ -35,11 +35,11 @@ onMounted( async () => {
 const goToProductPage = (id) => {
     router.push({name:'AdminProductView', params: {id}})
 }
-
 </script>
 
 <template>
-    <button>Add Product</button>
+    <button @click="router.push({name:'Catalog'})">Back to Catalog</button>
+    <button @click="router.push({name:'AdminNewProductView'})">Add Product</button>
     <div class="admin-item-list" v-for="product in products" :key="product.id">
         <admin-item :product-data="product" @click="goToProductPage(product.id)"/>
     </div>

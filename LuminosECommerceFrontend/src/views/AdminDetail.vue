@@ -12,7 +12,10 @@ import { useRoute, useRouter } from 'vue-router';
 
 const router = useRouter();
 const route = useRoute();
+
 let product = ref({})
+
+const user = JSON.parse(localStorage.getItem('user'));
 
 const fetchProductFromDB = async () => {
     let fetchProduct={}
@@ -32,28 +35,59 @@ const updatedProductToDB = async () => {
         body: JSON.stringify(product.value),
         headers: {
     "Content-type": "application/json; charset=UTF-8",
-    "Access-Control-Allow-Origin": "*"
+    "Access-Control-Allow-Origin": "*",
+    "Authorization": `Bearer ${user.token}`
+    
   }});
-  location.reload();
+  console.log("updated product");
 }
 
+const deleteProductFromDB = async() => {
+    let id = Number(route.params.id);
+    await fetch("https://localhost:7113/product?itemId="+id, {
+        method: "DELETE",
+        headers: {
+    "Content-type": "application/json; charset=UTF-8",
+    "Access-Control-Allow-Origin": "*",
+    "Authorization": `Bearer ${user.token}`
+    
+  }});
+  console.log("deleted product");
+  router.push({name:'AdminView'});
+}
 onMounted( async () => {
     product.value = await fetchProductFromDB()
 })
 </script>
 
 <template>
+    <button @click="router.push({name:'Catalog'})">Back to Catalog</button>
     <button @click="router.push({name:'AdminView'})">Back to Admin</button>
     <div class="admin-product">
         <div class="product-image">
             <img :src="product.imageFolderPath">
         </div>
         <div class="product-details">
-            <p>Name: {{ product.name }}</p>
-            <p>Description: {{ product.description }}</p>
-            <h2>Price: ${{ product.price }}</h2>
-            <input v-model="product.name" :placeholder="product.name" />
-            <button @click="updatedProductToDB()">Update Product</button>
+            <form @submit="updatedProductToDB()">
+                <div class="form-group">
+                    <label for="name">Product Name</label>
+                    <input type="text" v-model="product.name"/>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" v-model="product.description"/>
+                </div>
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="text" v-model="product.price"/>
+                </div>
+                <div class="form-group">
+                    <label for="image">ImageURL</label>
+                    <input type="text" v-model="product.imageFolderPath"/>
+                </div>
+                <button type="submit">Update</button>
+            </form>
+            <button @click="deleteProductFromDB">Delete</button>
         </div>
     </div>
 </template>

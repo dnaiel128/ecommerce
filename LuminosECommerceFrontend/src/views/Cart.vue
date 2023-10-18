@@ -1,5 +1,5 @@
 <script>
-import { defineComponent } from 'vue';
+import { defineComponent,computed } from 'vue';
 
 export default defineComponent({
     name:'CartView'
@@ -7,40 +7,54 @@ export default defineComponent({
 </script>
 
 <script setup>
-import { productsStore } from '../stores/products';
+import { cartStore } from '../stores/cart.store';
 import { useRouter } from 'vue-router';
 
-const store = productsStore();
+const store = cartStore();
 const router = useRouter();
 
-const removeFromCart = (id) => {
-    store.removeFromCart(id)
+const user = JSON.parse(localStorage.getItem('user'));
+
+const isLogged = computed(() => {
+  return user==null;
+})
+const removeFromCart = async (id,logged) => {
+    console.log("The user is logged:"+logged);
+    await store.removeFromCart(id,logged)
 }
 
-const placeOrder = (storeCart) => {
-    store.addNewOrder(storeCart)
-    addOrder(storeCart)
-    store.emptyCart()
-    console.log("orderComplete")
-    router.push({name:'OrderView'})
+const placeOrder = async (storeCart) => {
+    if(!isLogged.value)
+    {
+        await addOrder(storeCart)
+        await store.emptyCart(!isLogged.value)
+        console.log("orderComplete")
+        router.push({name:'OrderView'})
+    }
+    else
+    {
+        await store.emptyCart(!isLogged.value)
+        router.push({name:'LoginView'})
+    }
 }
 
-const addOrder = (storeCart) => {
+const addOrder = async (cartItems) => {
     let sum = 0
-    storeCart.forEach(item => {
+    cartItems.forEach(item => {
         sum +=item.price})
-    let OrderedItemsRemake = storeCart.map((item)=> (Number)(item.id))
-    console.log("store cart is:"+storeCart)
+    console.log("Te user id for which to add order is:"+user.id);
+    let OrderedItemsRemake = cartItems.map((item)=> (Number)(item.id))
+    console.log("store cart is:"+cartItems)
     console.log(JSON.stringify({
             Total: sum,
-            UserId: 1,
+            UserId: user.id,
             OrderDate: new Date().toJSON(),
             ItemsIds: OrderedItemsRemake}))
-    fetch("https://localhost:7113/order/addOrder", {
+    await fetch("https://localhost:7113/order/addOrder", {
         method: "POST",
         body: JSON.stringify({
             Total: sum,
-            UserId: 1,
+            UserId: user.id,
             OrderDate: new Date().toJSON(),
             ItemsIds: OrderedItemsRemake
     }),
@@ -63,15 +77,15 @@ const addOrder = (storeCart) => {
         v-for="item in store.cart" :key="item.id"
         >
         <div class="item-details">
-            <img :src="item.imageFolderPath">
+            <img :src="item.imageFolderPath"/>
             <span>Name: {{ item.name }}</span>
             <span>Category: TestCategory</span>
             <span>Price: ${{ item.price }}</span>
-            <button @click="removeFromCart(item.id)">Remove</button>
+            <button @click="removeFromCart(item.id,!isLogged)">Remove</button>
         </div>
         </div>
         <div class="place-order">
-            <button @click="placeOrder(store.cart)">Place Order</button>
+            <button @click="placeOrder(store.cart)">Place Order - TODO: STRIPE</button>
         </div>
     </div>
 </template>

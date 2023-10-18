@@ -83,7 +83,14 @@ namespace LuminosECommerce.UI.Controllers
 
             string token = _userService.CreateToken(user);
 
-            return Ok(token);
+            var response = new
+            {
+                id = user.Id,
+                username = user.Username,
+                token = token,
+                isAdmin = user.IsAdmin
+            };
+            return Ok(response);
         }
 
         [HttpGet]

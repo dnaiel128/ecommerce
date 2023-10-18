@@ -1,22 +1,76 @@
 <script setup>
 import { useRouter } from 'vue-router';
-import {productsStore} from '@/stores/products'
-import {computed} from 'vue'
+import {cartStore} from '@/stores/cart.store'
+import {computed,watch,ref,onMounted} from 'vue'
 import { authStore } from '@/stores/auth.store.js';
 
-const router=useRouter();
-const store = productsStore();
+
+const router = useRouter();
+const store = cartStore();
 const userStore = authStore();
 
-const baseUrl = `${import.meta.env.VITE_API_URL}`;
+const user = JSON.parse(localStorage.getItem('user'));
+
+watch(router, async () => {
+  isLogged()
+})
 
 const isLogged = computed(() => {
-  return localStorage.getItem('user')==null;
+  return user==null;
 })
+
+let cart = ref([])
+
+const getCart = async () => {
+    let cart = {}
+    if(!isLogged.value){
+      await fetch("https://localhost:7113/cart/getAllCartProducts?userId="+user.id, {
+        method: "GET",
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+          "Access-Control-Allow-Origin": "*"
+        }
+      })
+      .then(res => res.json())
+      .then(json => {
+        cart = json;
+        /*console.log("The cart for the user from db is:"+cart);
+        console.log("The json receivedd is:"+JSON.stringify(json));*/
+      })
+    }
+    if(cart==undefined) { return [];}
+    else { return cart;}
+}
 
 const logout = () => {
   userStore.logout();
+  location.reload();
 }
+
+onMounted(async()=>{
+  /*const cart = (localStorage.getItem('cart'));
+  console.log("The persisted cart in the local store is:"+cart);*/
+
+  if(!isLogged.value)
+  {
+    //console.log("we are logged");
+    cart.value = await getCart()
+    /*console.log("The value of the received cart is:"+cart.value);
+    console.log("The before cart value is:"+store.cart);*/
+    store.cart = cart.value
+  }
+  else
+  {
+    console.log("we are not logged");
+    store.cart = [];
+  }  
+})
+
+/* nu aici fac asta, cand se adauga un produs la cos, automat adaug si eu in local storage extra item, sau scot
+onUnmounted(() => {
+  console.log("The following cart is persited before exit:"+store.cart);
+  localStorage.setItem('cart', store.cart);
+})*/
 </script>
 
 <template>
@@ -25,8 +79,7 @@ const logout = () => {
       <p>Items in Cart: {{ store.cart.length }}</p>
     </div>
     <div class="admin-class" @click="router.push({name: 'AdminView'})">
-      <p>Admin</p>
-      <p>{{ baseUrl }}</p>
+      <p v-if="!(user==null) && user.isAdmin">Admin</p>
     </div>
     <div class="user">
       <div class="user-login" v-if="isLogged">

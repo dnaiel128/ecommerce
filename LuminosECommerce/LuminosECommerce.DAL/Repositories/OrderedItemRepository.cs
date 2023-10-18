@@ -9,11 +9,11 @@ namespace LuminosECommerce.DAL.Repositories
         {
 
         }
-        public async Task AddBulkAsync(IEnumerable<int> orderIds)
+        public async Task AddBulkAsync(IEnumerable<OrderedItem> orders)
         {
-            foreach(var id in  orderIds) 
+            foreach(var order in orders) 
             {
-                await _context.AddAsync(id);
+                await _context.AddAsync(order);
             }
 
             await _context.SaveChangesAsync();

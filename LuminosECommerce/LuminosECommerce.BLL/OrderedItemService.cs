@@ -12,9 +12,9 @@ namespace LuminosECommerce.BLL
             _orderedRepository = repository;
         }
 
-        public Task AddBulkAsync(IEnumerable<int> orderIds)
+        public Task AddBulkAsync(IEnumerable<OrderedItem> orders)
         {
-            return (_repository as IOrderedItemRepository)!.AddBulkAsync(orderIds);
+            return (_repository as IOrderedItemRepository)!.AddBulkAsync(orders);
         }
 
         public Task<IEnumerable<Item>> GetAllItemsOrderedAsync(int orderId)

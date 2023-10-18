@@ -11,27 +11,37 @@ export default defineComponent({
 </script>
 
 <script setup>
-import { onMounted } from 'vue';
-import { productsStore } from '@/stores/products';
+import { onMounted,ref } from 'vue';
 import { useRouter } from 'vue-router';
 
-const store = productsStore()
 const router = useRouter()
 
 const goToProductPage = (id) => {
     router.push({name:'ProductView', params: {id}})
 }
 
+let products = ref([]);
+
+const fetchProductsFromDB = async () => {
+    let fetchProducts=[]
+      await fetch('https://localhost:7113/product/getAll')
+      .then(res => res.json())
+      .then(json => {
+        fetchProducts = json.items;
+      })
+      return fetchProducts;
+    }
+
 onMounted( async () => {
-    await store.fetchProductsFromDB()
-    })
+    products.value = await fetchProductsFromDB()
+})
 </script>
 
 <template>
     <div class="products-list"> 
         <product-item class="product-item"
         :product-data="product"
-        v-for="product in store.products"
+        v-for="product in products"
         :key="product.id"
         @click="goToProductPage(product.id)"
         />

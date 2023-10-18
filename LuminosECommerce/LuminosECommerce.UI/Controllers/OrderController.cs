@@ -27,9 +27,9 @@ namespace LuminosECommerce.UI.Controllers
         [HttpGet]
         [ProducesResponseType(typeof(List<OrderDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        public async Task<IActionResult> GetAllOrders()
+        public async Task<IActionResult> GetAllOrders([FromQuery] int userId)
         {
-            var allOrders = await _orderService.GetAllOrdersAsync(1);
+            var allOrders = await _orderService.GetAllOrdersAsync(userId);
             
             return Ok(allOrders);
         }
@@ -50,12 +50,16 @@ namespace LuminosECommerce.UI.Controllers
 
                 await _orderService.AddAsync(orderToAdd);
 
+                List<OrderedItem> newOrderedItems = new List<OrderedItem>();
+
                 foreach(var id in newOrder.ItemsIds)
                 {
-                    OrderedItem item = new OrderedItem() { ItemId=id, OrderId=orderToAdd.Id};
-
-                    await _orderedItemService.AddAsync(item);
+                    OrderedItem item = new OrderedItem() { ItemId=id, OrderId=orderToAdd.Id }; 
+                    
+                    newOrderedItems.Add(item);
                 }
+
+                await _orderedItemService.AddBulkAsync(newOrderedItems);
 
                 return Created("", newOrder);
             }

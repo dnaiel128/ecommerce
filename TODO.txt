@@ -1,0 +1,16 @@
+1. Refactor code
+1.1 Move functions from script setup into their respective stores, like with auth.store
+1.2 Remove all the unused imports in the backend
+
+2. Anonymous user cart
+Add the cart of the anonymous user to the logging user
+
+3. Add CSS to Fronend
+
+4. Add Categories and UserReviews feature from the DB
+
+5. Seed DB with Items and Users
+
+6. Add at least 1 stored procedure
+
+7. Add validation for Frontend forms 
