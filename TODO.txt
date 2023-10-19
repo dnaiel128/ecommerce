@@ -2,7 +2,7 @@
 1.1 Move functions from script setup into their respective stores, like with auth.store
 1.2 Remove all the unused imports in the backend
 
-2. Anonymous user cart
+2. Anonymous user cart - DONE
 Add the cart of the anonymous user to the logging user
 
 3. Add CSS to Fronend
