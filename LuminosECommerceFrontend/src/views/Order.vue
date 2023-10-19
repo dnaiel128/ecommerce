@@ -32,7 +32,6 @@ const fetchOrders = async () => {
 
 onMounted( async () => {
     orders.value = await fetchOrders()
-    //console.log("The orders got from db are:"+JSON.stringify(orders.value));
 })
 </script>
 

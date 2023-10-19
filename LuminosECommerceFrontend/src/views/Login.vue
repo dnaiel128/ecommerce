@@ -8,6 +8,7 @@ export default defineComponent({
 
 <script setup>
 import { authStore } from '@/stores/auth.store.js';
+import {cartStore} from '@/stores/cart.store.js';
 import {ref} from 'vue';
 import { useRouter } from 'vue-router';
 
@@ -15,9 +16,17 @@ const router = useRouter()
 
 let user = ref({})
 
-const login = () => {
+const login = async () => {
     const store = authStore();
-    return store.login(user.value.username, user.value.password)
+    const cart = cartStore();
+    
+    await store.login(user.value.username, user.value.password)
+
+    if(cart.cart.length)
+    {
+        await cart.addBulk()
+    }
+    router.push({name:'HomeView'});
 }
 </script>
 

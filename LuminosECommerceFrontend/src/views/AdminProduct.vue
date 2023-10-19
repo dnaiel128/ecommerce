@@ -17,7 +17,6 @@ const user = JSON.parse(localStorage.getItem('user'));
 let newProduct = ref({})
 
 const addProduct = async () => {
-    console.log("new product to be added to the db is: " + newProduct.value);
     await fetch("https://localhost:7113/product", {
         method: "POST",
         body: JSON.stringify(newProduct.value),
@@ -28,7 +27,6 @@ const addProduct = async () => {
 
         }
     });
-    console.log("added new product product");
 }
 </script>
 

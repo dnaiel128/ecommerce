@@ -9,21 +9,24 @@ const router = useRouter();
 const store = cartStore();
 const userStore = authStore();
 
-const user = JSON.parse(localStorage.getItem('user'));
+let user = JSON.parse(localStorage.getItem('user'));
 
-watch(router, async () => {
-  isLogged()
+watch(() => router.currentRoute.value, (to, from) => {
+
+  if(from.fullPath=='/user/login' && to.fullPath=='/'){
+    location.reload();
+  }
 })
 
 const isLogged = computed(() => {
-  return user == null;
+  return !(user == null);
 })
 
 let cart = ref([])
 
 const getCart = async () => {
   let cart = {}
-  if (!isLogged.value) {
+  if (isLogged.value) {
     await fetch("https://localhost:7113/cart/getAllCartProducts?userId=" + user.id, {
       method: "GET",
       headers: {
@@ -34,8 +37,6 @@ const getCart = async () => {
       .then(res => res.json())
       .then(json => {
         cart = json;
-        /*console.log("The cart for the user from db is:"+cart);
-        console.log("The json receivedd is:"+JSON.stringify(json));*/
       })
   }
   if (cart == undefined) { return []; }
@@ -48,27 +49,16 @@ const logout = () => {
 }
 
 onMounted(async () => {
-  /*const cart = (localStorage.getItem('cart'));
-  console.log("The persisted cart in the local store is:"+cart);*/
 
-  if (!isLogged.value) {
-    //console.log("we are logged");
+  if (isLogged.value) {
     cart.value = await getCart()
-    /*console.log("The value of the received cart is:"+cart.value);
-    console.log("The before cart value is:"+store.cart);*/
     store.cart = cart.value
   }
   else {
-    console.log("we are not logged");
     store.cart = [];
   }
 })
 
-/* nu aici fac asta, cand se adauga un produs la cos, automat adaug si eu in local storage extra item, sau scot
-onUnmounted(() => {
-  console.log("The following cart is persited before exit:"+store.cart);
-  localStorage.setItem('cart', store.cart);
-})*/
 </script>
 
 <template>
@@ -100,13 +90,13 @@ onUnmounted(() => {
           <li class="nav-item active" v-if="!(user == null) && user.isAdmin">
             <a class="nav-link" @click="router.push({ name: 'AdminView' })" style="cursor: pointer">Admin <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item active" v-if="isLogged">
+          <li class="nav-item active" v-if="!isLogged">
             <a class="nav-link" @click="router.push({ name: 'LoginView' })" style="cursor: pointer">Login <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item active" v-if="isLogged">
+          <li class="nav-item active" v-if="!isLogged">
             <a class="nav-link" @click="router.push({ name: 'RegisterView' })" style="cursor: pointer">Register <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item active" v-if="!isLogged">
+          <li class="nav-item active" v-if="isLogged">
             <a class="nav-link" @click="logout()" style="cursor: pointer">Logout <span class="sr-only">(current)</span></a>
           </li>
         </ul>

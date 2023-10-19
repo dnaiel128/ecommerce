@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\LuminosECommerce.UI.bundle.scp.css",
-      "PackagePath": "staticwebassets\\LuminosECommerce.UI.bundle.scp.css"
-    },
-    {
       "Id": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\Vue\\Products.js",
       "PackagePath": "staticwebassets\\Vue\\Products.js"
     },

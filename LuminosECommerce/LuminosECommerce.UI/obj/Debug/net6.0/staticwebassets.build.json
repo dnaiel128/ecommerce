@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8DwAQLkc0CaT8FZ4etMnjf/AYVddQKf9t5gHlLeMYOg=",
+  "Hash": "WSI5NgTb8JjZAQxiH5uvaf5YxTTC4uWQvJHrq9BT/rg=",
   "Source": "LuminosECommerce.UI",
   "BasePath": "_content/LuminosECommerce.UI",
   "Mode": "Default",
@@ -16,40 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\obj\\Debug\\net6.0\\scopedcss\\bundle\\LuminosECommerce.UI.styles.css",
-      "SourceId": "LuminosECommerce.UI",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/LuminosECommerce.UI",
-      "RelativePath": "LuminosECommerce.UI.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\obj\\Debug\\net6.0\\scopedcss\\bundle\\LuminosECommerce.UI.styles.css"
-    },
-    {
-      "Identity": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\LuminosECommerce.UI.bundle.scp.css",
-      "SourceId": "LuminosECommerce.UI",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/LuminosECommerce.UI",
-      "RelativePath": "LuminosECommerce.UI.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\LuminosECommerce.UI.bundle.scp.css"
-    },
     {
       "Identity": "C:\\Users\\Daniel\\Desktop\\LuminosLabs\\ecommerce\\LuminosECommerce\\LuminosECommerce.UI\\wwwroot\\css\\site.css",
       "SourceId": "LuminosECommerce.UI",

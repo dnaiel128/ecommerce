@@ -8,13 +8,7 @@ export const cartStore = defineStore('cart', {
   actions:{
     async addToCart (product,logged) {
       let user = JSON.parse(localStorage.getItem('user'));
-      console.log("user local storage is :"+user);
       if(logged){
-        console.log("The wanted body for the cart is:"+JSON.stringify({
-          UserId:user.id,
-          ItemId:product.id
-        }))
-
         await fetch("https://localhost:7113/cart", {
           method: "POST",
           body: JSON.stringify({
@@ -62,5 +56,24 @@ export const cartStore = defineStore('cart', {
       }
       this.cart = []
     },
+
+    async addBulk () {
+      let user = JSON.parse(localStorage.getItem('user'));
+      let cartedItems = []
+      this.cart.forEach(item => {
+        cartedItems.push({
+          UserId:user.id,
+          ItemId:item.id
+        })
+      });
+      await fetch("https://localhost:7113/cart/addBulk", {
+        method: "POST",
+        body: JSON.stringify(cartedItems),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+          "Access-Control-Allow-Origin": "*",
+        }
+      })
+    }
   }
 })

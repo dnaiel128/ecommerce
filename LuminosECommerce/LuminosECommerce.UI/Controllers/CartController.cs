@@ -94,7 +94,7 @@ namespace LuminosECommerce.UI.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> AddCartBulk([FromBody] CartItemsDTO newItems)
+        public async Task<IActionResult> AddCartBulk([FromBody] IEnumerable<Cart> newItems)
         {
             if (!ModelState.IsValid)
             {

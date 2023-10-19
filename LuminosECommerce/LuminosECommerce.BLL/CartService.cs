@@ -15,7 +15,7 @@ namespace LuminosECommerce.BLL
             _cartRepository = repository;
         }
 
-        public Task AddBulkAsync(CartItemsDTO newItems)
+        public Task AddBulkAsync(IEnumerable<Cart> newItems)
         {
             return (_repository as ICartRepository)!.AddBulkAsync(newItems);
         }

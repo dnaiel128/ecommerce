@@ -12,9 +12,9 @@ namespace LuminosECommerce.DAL.Repositories
 
         }
 
-        public async Task AddBulkAsync(CartItemsDTO newItems)
+        public async Task AddBulkAsync(IEnumerable<Cart> newItems)
         {
-            foreach(var cartItem in newItems.CartItems)
+            foreach(var cartItem in newItems)
             {
                 await _context.Carts.AddAsync(cartItem);
             }

@@ -23,9 +23,9 @@ export const authStore = defineStore({
             // store user details and jwt in local storage to keep user logged in between page refreshes
             // this only stores the jwt of a user in local storage
             localStorage.setItem('user', user);
-
+            
             // redirect to previous url or default to home page
-            window.location.href = 'http://localhost:5173/';
+            //window.location.href = 'http://localhost:5173/';
             //router.push('http://localhost:5173/');
         },
 

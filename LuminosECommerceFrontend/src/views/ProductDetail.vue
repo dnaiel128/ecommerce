@@ -29,8 +29,6 @@ const fetchProductFromDB = async () => {
     }
 
 const addToCart = (logged) => {
-    console.log("the wanted product to be adddedd to the store is :"+JSON.stringify(product.value));
-    console.log("the user is logged"+logged);
     store.addToCart(product.value,logged)
     router.push({name:'CartView'})
 }
@@ -38,7 +36,7 @@ const addToCart = (logged) => {
 const user = JSON.parse(localStorage.getItem('user'));
 
 const isLogged = computed(() => {
-  return user==null;
+  return !(user==null);
 })
 
 onMounted( async () => {
@@ -56,7 +54,7 @@ onMounted( async () => {
             <p>Name: {{ product.name }}</p>
             <p>Description: {{ product.description }}</p>
             <h2>Price: ${{ product.price }}</h2>
-            <button class="btn btn-outline-secondary my-2 my-sm-0" @click="addToCart(!isLogged)">Add to cart</button>
+            <button class="btn btn-outline-secondary my-2 my-sm-0" @click="addToCart(isLogged)">Add to cart</button>
         </div>
     </div>
 </template>

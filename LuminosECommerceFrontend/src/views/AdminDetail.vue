@@ -29,7 +29,6 @@ const fetchProductFromDB = async () => {
 }
 
 const updatedProductToDB = async () => {
-    console.log(product.value)
     await fetch("https://localhost:7113/product", {
         method: "PUT",
         body: JSON.stringify(product.value),
@@ -40,7 +39,6 @@ const updatedProductToDB = async () => {
 
         }
     });
-    console.log("updated product");
 }
 
 const deleteProductFromDB = async () => {
@@ -54,7 +52,6 @@ const deleteProductFromDB = async () => {
 
         }
     });
-    console.log("deleted product");
     router.push({ name: 'AdminView' });
 }
 onMounted(async () => {
@@ -71,7 +68,7 @@ onMounted(async () => {
                 <img :src="product.imageFolderPath">
             </div>
             <div class="product-details">
-                <form>
+                <form @submit="updatedProductToDB">
                     <div class="form-group">
                         <label for="name">Product Name</label>
                         <input type="text" class="form-control" v-model="product.name">
