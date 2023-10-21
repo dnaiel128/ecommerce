@@ -71,14 +71,16 @@ namespace LuminosECommerce.UI.Controllers
 
             try
             {
-                var item = await _itemService.GetByIdAsync(id);
+                //var item = await _itemService.GetByIdAsync(id);
 
-                if(item == null)
+                var item = await _itemService.GetByIdAsyncWithSP(id);
+
+                if (item.Count == 0)
                 {
                     return new NoContentResult();
                 }    
 
-                return Ok(item);
+                return Ok(item[0]);
 
             }
             catch (Exception ex)

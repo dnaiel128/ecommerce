@@ -14,6 +14,11 @@ namespace LuminosECommerce.BLL
             _itemRepository = repository;
         }
 
+        public Task<List<Item>> GetByIdAsyncWithSP(int id)
+        {
+            return (_repository as IItemRepository)!.GetByIdAsyncWithSP(id);
+        }
+
         public Task<PagedModel<Item>> GetByPageWithFilterAndSortAsync(ItemQueryParameters queryParameters)
         {
             return (_repository as IItemRepository)!.GetByPageWithFilterAndSortAsync(queryParameters);

@@ -7,5 +7,6 @@ namespace LuminosECommerce.BLL
     public interface IItemService : IService<Item>
     {
         Task<PagedModel<Item>> GetByPageWithFilterAndSortAsync(ItemQueryParameters queryParameters);
+        Task<List<Item>> GetByIdAsyncWithSP(int id);
     }
 }

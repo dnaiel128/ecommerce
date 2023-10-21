@@ -1,6 +1,4 @@
-﻿using LuminosECommerce.DAL.Pagination.Models;
-using LuminosECommerce.DAL.Pagination;
-using LuminosECommerce.Models;
+﻿using LuminosECommerce.Models;
 
 namespace LuminosECommerce.BLL
 {

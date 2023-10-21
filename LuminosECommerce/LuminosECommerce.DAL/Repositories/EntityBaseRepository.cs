@@ -33,7 +33,7 @@ namespace EndavaTrainingsPlatform.DAL
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync(T entity)
+        public virtual async Task UpdateAsync(T entity)
         {
             _context.ChangeTracker.Clear();
 

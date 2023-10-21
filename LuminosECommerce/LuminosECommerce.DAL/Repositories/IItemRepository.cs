@@ -8,5 +8,7 @@ namespace LuminosECommerce.DAL.Repositories
     public interface IItemRepository : IEntityBaseRepository<Item>
     {
         Task<PagedModel<Item>> GetByPageWithFilterAndSortAsync(ItemQueryParameters queryParameters);
+
+        Task<List<Item>> GetByIdAsyncWithSP(int id);
     }
 }

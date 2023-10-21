@@ -16,5 +16,16 @@ namespace LuminosECommerce.DAL.Repositories
         {
             return await _context.Items.AsNoTracking().Include(d => d.UserReviews).PaginateWithFilterAndSortAsync(queryParameters);
         }
+
+        public async Task<List<Item>> GetByIdAsyncWithSP(int id)
+        {
+            return await _context.Items.FromSqlRaw($"SelectItem {id}").ToListAsync();
+        }
+
+        public override async Task UpdateAsync(Item item)
+        {
+            await _context.Database
+                .ExecuteSqlRawAsync($"UpdateItem {item.Id}, '{item.Name}', {item.Price}, '{item.Description}', '{item.ImageFolderPath}'");
+        }
     }
 }
