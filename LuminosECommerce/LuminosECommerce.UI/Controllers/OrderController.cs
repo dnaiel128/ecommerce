@@ -1,10 +1,7 @@
 ﻿using LuminosECommerce.BLL;
-using LuminosECommerce.DAL.Pagination.Models;
-using LuminosECommerce.DAL.Pagination;
 using LuminosECommerce.Models;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
-using LuminosECommerce.UI.Models;
 using LuminosECommerce.Models.DTOs;
 
 namespace LuminosECommerce.UI.Controllers
@@ -52,11 +49,11 @@ namespace LuminosECommerce.UI.Controllers
 
                 List<OrderedItem> newOrderedItems = new List<OrderedItem>();
 
-                foreach(var id in newOrder.ItemsIds)
+                foreach(var item in newOrder.Items)
                 {
-                    OrderedItem item = new OrderedItem() { ItemId=id, OrderId=orderToAdd.Id }; 
+                    OrderedItem newItem = new OrderedItem() { ItemId=item.ItemId, OrderId=orderToAdd.Id, Quantity = item.ItemQuantity }; 
                     
-                    newOrderedItems.Add(item);
+                    newOrderedItems.Add(newItem);
                 }
 
                 await _orderedItemService.AddBulkAsync(newOrderedItems);

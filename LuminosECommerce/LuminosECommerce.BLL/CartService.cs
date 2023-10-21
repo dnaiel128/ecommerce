@@ -30,9 +30,24 @@ namespace LuminosECommerce.BLL
             return (_repository as ICartRepository)!.DeleteByItemAsync(item);
         }
 
-        public Task<IEnumerable<Item>> GetAllCartItemsAsync(int userId)
+        public Task<IEnumerable<CartItemDTO>> GetAllCartItemsAsync(int userId)
         {
             return (_repository as ICartRepository)!.GetAllCartItemsAsync(userId);
+        }
+
+        public override async Task<Cart> AddAsync(Cart entity)
+        {
+            Cart existingItem = await (_repository as ICartRepository)!.GetByItemAsync(entity);
+
+            if (existingItem == null) 
+            {
+                return await base.AddAsync(entity);
+            }
+            else
+            {
+                existingItem.Quantity = entity.Quantity;
+                return await base.UpdateAsync(existingItem);
+            }
         }
     }
 }

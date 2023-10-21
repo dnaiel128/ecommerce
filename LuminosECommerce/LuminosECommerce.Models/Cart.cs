@@ -12,5 +12,6 @@ namespace LuminosECommerce.Models
         [ForeignKey("Item")]
         public int ItemId { get; set; }
         public Item? Item { get; set; }
+        public int Quantity { get; set; } = 1;
     }
 }

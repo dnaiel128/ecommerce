@@ -27,7 +27,8 @@ namespace LuminosECommerce.DAL.Repositories
                         {
                             Id = or.Item.Id,
                             Name = or.Item.Name,
-                            Price = or.Item.Price
+                            Price = or.Item.Price,
+                            Quantity = or.Quantity
                         }
                     }).ToList()
                 }).ToListAsync();            

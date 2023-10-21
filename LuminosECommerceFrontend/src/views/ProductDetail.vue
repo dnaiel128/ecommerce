@@ -16,6 +16,7 @@ const router = useRouter()
 const route = useRoute()
 
 let product = ref({})
+let productQuantity = ref()
 
 const fetchProductFromDB = async () => {
     let fetchProduct={}
@@ -28,9 +29,11 @@ const fetchProductFromDB = async () => {
       return fetchProduct;
     }
 
-const addToCart = (logged) => {
-    store.addToCart(product.value,logged)
-    router.push({name:'CartView'})
+const addToCart = (logged,productQuantity) => {
+    if(rightNumber()) {
+        store.addToCart(product.value,logged,productQuantity)
+        router.push({name:'CartView'})
+    }
 }
 
 const user = JSON.parse(localStorage.getItem('user'));
@@ -39,6 +42,17 @@ const isLogged = computed(() => {
   return !(user==null);
 })
 
+const rightNumber= () =>{
+    if(productQuantity.value!=null) {
+        if(productQuantity.value>=1 && productQuantity.value<=100){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    return true;
+}
 onMounted( async () => {
     product.value = await fetchProductFromDB()
 })
@@ -54,7 +68,11 @@ onMounted( async () => {
             <p>Name: {{ product.name }}</p>
             <p>Description: {{ product.description }}</p>
             <h2>Price: ${{ product.price }}</h2>
-            <button class="btn btn-outline-secondary my-2 my-sm-0" @click="addToCart(isLogged)">Add to cart</button>
+            <div>
+                <button class="btn btn-outline-secondary my-2 my-sm-0" @click="addToCart(isLogged,productQuantity)">Add to cart</button>
+                <input type="number" class="form-control" v-model="productQuantity"/>
+                <span v-show="!rightNumber()">Please enter a number between 1-100.</span>
+            </div>
         </div>
     </div>
 </template>

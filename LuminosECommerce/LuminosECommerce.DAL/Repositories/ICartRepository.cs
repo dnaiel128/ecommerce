@@ -9,6 +9,7 @@ namespace LuminosECommerce.DAL.Repositories
         Task AddBulkAsync(IEnumerable<Cart> newItems);
         Task ClearCartAsync(int userId);
         Task DeleteByItemAsync(Cart item);
-        Task<IEnumerable<Item>> GetAllCartItemsAsync(int userId);
+        Task<IEnumerable<CartItemDTO>> GetAllCartItemsAsync(int userId);
+        Task<Cart> GetByItemAsync(Cart item);
     }
 }

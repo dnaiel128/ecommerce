@@ -39,21 +39,30 @@ const placeOrder = async (storeCart) => {
 const addOrder = async (cartItems) => {
     let sum = 0
     cartItems.forEach(item => {
-        sum +=item.price})
-    let OrderedItemsRemake = cartItems.map((item)=> (Number)(item.id))
+        sum +=item.item.price*item.quantity})
+
+    let OrderedItemsRemake = cartItems.map((item)=> ({
+        ItemId:(Number)(item.item.id),
+        ItemQuantity:item.quantity}
+        ))
+
     await fetch("https://localhost:7113/order/addOrder", {
         method: "POST",
         body: JSON.stringify({
             Total: sum,
             UserId: user.id,
             OrderDate: new Date().toJSON(),
-            ItemsIds: OrderedItemsRemake
+            Items: OrderedItemsRemake
     }),
         headers: {
     "Content-type": "application/json; charset=UTF-8",
     "Access-Control-Allow-Origin": "*"
   }
 });
+}
+
+let updateQuantity= async(id,logged,inc) =>{
+    await store.updateQuantity(id,logged,inc);
 }
 </script>
 
@@ -66,14 +75,20 @@ const addOrder = async (cartItems) => {
 
     <div class="cart-items" v-else>
         <div class="cart-item"
-        v-for="item in store.cart" :key="item.id"
+        v-for="cartItem in store.cart" 
+        :key="cartItem.item.id"
         >
         <div class="item-details">
-            <img :src="item.imageFolderPath"/>
-            <span>Name: {{ item.name }}</span>
+            <img :src="cartItem.item.imageFolderPath"/>
+            <span>Name: {{ cartItem.item.name }}</span>
             <span>Category: TestCategory</span>
-            <span>Price: ${{ item.price }}</span>
-            <button class="btn btn-outline-danger" @click="removeFromCart(item.id,isLogged)">Remove</button>
+            <span>Price: ${{ cartItem.item.price }}</span>
+            <div>
+                <span @click="()=>updateQuantity(cartItem.item.id,isLogged,false)">-</span>
+                <span>Quantity: {{cartItem.quantity}}</span>
+                <span @click="()=>updateQuantity(cartItem.item.id,isLogged,true)">+</span>
+            </div>
+            <button class="btn btn-outline-danger" @click="removeFromCart(cartItem.item.id,isLogged)">Remove</button>
         </div>
         </div>
         <div class="place-order">

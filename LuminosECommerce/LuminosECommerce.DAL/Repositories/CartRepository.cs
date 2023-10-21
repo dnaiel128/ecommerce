@@ -42,9 +42,19 @@ namespace LuminosECommerce.DAL.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Item>> GetAllCartItemsAsync(int userId)
+        public async Task<IEnumerable<CartItemDTO>> GetAllCartItemsAsync(int userId)
         {
-            return await _context.Carts.Where(c => c.UserId == userId).Select(c=> c.Item).ToListAsync();
+            return await _context.Carts.Where(c => c.UserId == userId)
+                .Select(c=> new CartItemDTO
+                {
+                    Item = c.Item,
+                    Quantity = c.Quantity
+                }).ToListAsync();
+        }
+
+        public async Task<Cart> GetByItemAsync(Cart item)
+        {
+            return await _context.Carts.Where(c => c.UserId == item.UserId && c.ItemId == item.ItemId).FirstOrDefaultAsync();
         }
     }
 }
