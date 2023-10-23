@@ -1,20 +1,21 @@
 <script>
 import { defineComponent } from 'vue';
-import ProductItem from '../components/ProductItem.vue';
+import CatalogItem from '../components/CatalogItem.vue';
 
 export default defineComponent({
     name:'CatalogView',
     components:{
-        ProductItem
+        CatalogItem
     }
 })
 </script>
 
 <script setup>
 import { onMounted,ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { useRouter, useRoute } from 'vue-router';
 
 const router = useRouter()
+const route = useRoute()
 
 const goToProductPage = (id) => {
     router.push({name:'ProductView', params: {id}})
@@ -24,10 +25,12 @@ let products = ref([]);
 
 const fetchProductsFromDB = async () => {
     let fetchProducts=[]
-      await fetch('https://localhost:7113/product/getAll')
+    let searchTerm = route.query.name;
+    if(!searchTerm) { searchTerm=''; }
+      await fetch('https://localhost:7113/product/search?name='+searchTerm)
       .then(res => res.json())
       .then(json => {
-        fetchProducts = json.items;
+        fetchProducts = json;
       })
       return fetchProducts;
     }
@@ -39,7 +42,7 @@ onMounted( async () => {
 
 <template>
     <div class="products-list"> 
-        <product-item class="product-item"
+        <catalog-item class="product-item"
         :product-data="product"
         v-for="product in products"
         :key="product.id"

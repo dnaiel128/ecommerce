@@ -24,6 +24,9 @@ const isLogged = computed(() => {
 
 let cart = ref([])
 
+let searchTerm = ref('')
+let productsFound = ref([])
+
 const getCart = async () => {
   let cart = {}
   if (isLogged.value) {
@@ -41,6 +44,40 @@ const getCart = async () => {
   }
   if (cart == undefined) { return []; }
   else { return cart; }
+}
+
+watch(searchTerm, async () => {
+
+  if(searchTerm.value.length>=3) {
+    await fetch("https://localhost:7113/product/autocomplete?name="+searchTerm.value, {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+        "Access-Control-Allow-Origin": "*"
+      }
+    })
+      .then(res => res.json())
+      .then(json => {
+        productsFound.value = json;
+      })
+    }
+  else {
+    productsFound.value=[];
+  }
+});
+
+let navigateToProduct = (id) =>{
+  productsFound.value=[];
+
+  searchTerm.value='';
+
+  router.push({ name: 'ProductView', params: { id: id } })
+}
+
+let searchProducts = (newSearchTerm) => {
+  searchTerm.value='';
+
+  router.push({name:'Catalog', query: {name:newSearchTerm}})
 }
 
 const logout = () => {
@@ -79,8 +116,8 @@ onMounted(async () => {
             <a class="nav-link" @click="router.push({name:'Catalog'})" style="cursor: pointer">Catalog <span class="sr-only">(current)</span></a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0 mr-auto">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="form-inline my-2 my-lg-0 mr-auto" @submit.prevent="searchProducts(searchTerm)">
+          <input class="form-control mr-sm-2 auto-complete" type="search" placeholder="Search" aria-label="Search" v-model="searchTerm">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
         <ul class="navbar-nav mr-auto">
@@ -104,6 +141,16 @@ onMounted(async () => {
     </nav>
   </header>
   <main>
+    <div class="search-results container">
+      <ul v-if="productsFound.value==null" class="list-group">
+            <li v-for="result in productsFound" 
+            :key="result.id" 
+            @click="navigateToProduct(result.id)"
+            class="list-group-item list-group-item-action col-3">
+              {{ result.name }}
+            </li>
+          </ul>
+    </div>
     <RouterView />
   </main>
 </template>
@@ -115,5 +162,9 @@ onMounted(async () => {
   font-weight: bold;
   font-size: 24px;
   cursor: pointer;
+}
+.search-results{
+  position: absolute;
+  left:30%;
 }
 </style>

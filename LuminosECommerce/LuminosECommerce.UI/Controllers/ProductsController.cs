@@ -160,5 +160,50 @@ namespace LuminosECommerce.UI.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+
+        [Route("/product/autocomplete")]
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> Autocomplete([FromQuery] String name)
+        {
+            if (name.Length<3)
+            {
+                return BadRequest("Name less than 3 characters");
+            }
+
+            try
+            {
+                var items = await _itemService.AutocompleteAsync(name);
+                return Ok(items);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [Route("/product/search")]
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> SearchProducts([FromQuery] String name)
+        {
+            try
+            {
+                if(string.IsNullOrEmpty(name))
+                {
+                    name = string.Empty;
+                }
+
+                var items = await _itemService.AutocompleteAsync(name);
+                return Ok(items);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }

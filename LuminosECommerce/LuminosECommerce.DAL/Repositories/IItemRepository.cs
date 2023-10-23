@@ -2,6 +2,7 @@
 using LuminosECommerce.DAL.Pagination;
 using LuminosECommerce.DAL.Pagination.Models;
 using LuminosECommerce.Models;
+using LuminosECommerce.Models.DTOs;
 
 namespace LuminosECommerce.DAL.Repositories
 {
@@ -10,5 +11,6 @@ namespace LuminosECommerce.DAL.Repositories
         Task<PagedModel<Item>> GetByPageWithFilterAndSortAsync(ItemQueryParameters queryParameters);
 
         Task<List<Item>> GetByIdAsyncWithSP(int id);
+        Task<List<Item>> AutocompleteAsync(string name);
     }
 }

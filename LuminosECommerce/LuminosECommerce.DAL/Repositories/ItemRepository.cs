@@ -2,6 +2,7 @@
 using LuminosECommerce.DAL.Pagination;
 using LuminosECommerce.DAL.Pagination.Models;
 using LuminosECommerce.Models;
+using LuminosECommerce.Models.DTOs;
 using Microsoft.EntityFrameworkCore;
 
 namespace LuminosECommerce.DAL.Repositories
@@ -26,6 +27,11 @@ namespace LuminosECommerce.DAL.Repositories
         {
             await _context.Database
                 .ExecuteSqlRawAsync($"UpdateItem {item.Id}, '{item.Name}', {item.Price}, '{item.Description}', '{item.ImageFolderPath}'");
+        }
+
+        public async Task<List<Item>> AutocompleteAsync(string name)
+        {
+            return await _context.Items.Where(i => i.Name.ToLower().Contains(name.ToLower())).ToListAsync();
         }
     }
 }
